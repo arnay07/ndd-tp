@@ -2,6 +2,11 @@
 Class commande.BP.GestionSinistre Extends Ens.BusinessProcessBPL
 {
 
+Storage Default
+{
+<Type>%Storage.Persistent</Type>
+}
+
 /// BPL Definition
 XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 {
@@ -13,11 +18,6 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 <trace name='plaque' value='"Plaque : " _ request.plaque' xpos='200' ypos='550' />
 </sequence>
 </process>
-}
-
-Storage Default
-{
-<Type>%Storage.Persistent</Type>
 }
 
 }

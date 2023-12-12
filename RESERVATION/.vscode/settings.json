@@ -5,7 +5,7 @@
       },
     "objectscript.conn" :{
       "ns": "RESERVATION",
-      "active": true,
+      "active": false,
       "links": {
         "CRUD REST spec": "http://localhost:${port}/crud/_spec"
       },

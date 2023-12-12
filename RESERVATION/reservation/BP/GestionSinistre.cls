@@ -11,7 +11,7 @@ Storage Default
 XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 {
 <process language='objectscript' request='reservation.msg.voitureCreerSinistreDmde' response='reservation.msg.voitureCreerSinistreRpse' height='2000' width='2000' >
-<sequence xend='200' yend='350' >
+<sequence xend='199' yend='555' >
 <call name='CreerSinistre' target='Sinistre' async='0' xpos='200' ypos='250' >
 <annotation><![CDATA[On appelle l'operation permettant de repertorier le sinitre]]></annotation>
 <request type='reservation.msg.voitureCreerSinistreDmde' >
@@ -20,6 +20,15 @@ XData BPL [ XMLNamespace = "http://www.intersystems.com/bpl" ]
 <response type='reservation.msg.voitureCreerSinistreRpse' >
 <assign property="response" value="callresponse" action="set" />
 </response>
+</call>
+<call name='EnvoiFichierSinistre' target='FileReservation' async='0' xpos='200' ypos='429' >
+<request type='reservation.msg.pushSinistreFileDmde' >
+<assign property="callrequest.plaque" value="request.plaque" action="set" />
+<assign property="callrequest.sinistre.codeSinistre" value="request.sinistre.codeSinistre" action="set" />
+<assign property="callrequest.sinistre.libelleSinistre" value="request.sinistre.libelleSinistre" action="set" />
+<assign property="callrequest.sinistre.detailSinistre" value="request.sinistre.detailSinistre" action="set" />
+</request>
+<response type='reservation.msg.pushSinistreFileRpse' />
 </call>
 </sequence>
 </process>

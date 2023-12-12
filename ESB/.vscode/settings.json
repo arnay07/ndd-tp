@@ -1,18 +1,13 @@
 {
-    "files.associations": {
-    
-        "Dockerfile*": "dockerfile",
-      },
-    "objectscript.conn" :{
-      "ns": "ESB",
-      "active": true,
-      "links": {
-        "CRUD REST spec": "http://localhost:${port}/crud/_spec"
-      },
-      "server": "iris"
-    }
-    
-    
-  
-
+  "files.associations": {
+    "Dockerfile*": "dockerfile"
+  },
+  "objectscript.conn": {
+    "ns": "ESB",
+    "active": false,
+    "links": {
+      "CRUD REST spec": "http://localhost:${port}/crud/_spec"
+    },
+    "server": "iris"
+  }
 }
